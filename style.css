@@ -53,6 +53,23 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+.fake-btn a {
+  font-weight: 600;
+  transition: all 300 ms ease;
+  padding: 1rem;
+  width: 7rem;
+  border-radius: 2rem;
+  display: flex;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  background: none;
+}
+
+.fake-btn a:hover {
+  cursor: pointer;
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
 .logo {
   font-size: 2rem;
 }
