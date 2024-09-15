@@ -137,8 +137,10 @@ section {
 
 /*Footer */
 footer {
+  padding-top: 20px;
   align-self: center;
   text-align: center;
+  flex-shrink: 0;
 }
 
 /* Contact*/
@@ -178,6 +180,26 @@ footer {
 
 .contact-info-container {
   font-size: larger;
+}
+
+/*Work exp */
+
+/*Assignments*/
+#assignments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: center;
+}
+
+/* Projects */
+#projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+  text-align: center;
 }
 
 /* Fonts */
