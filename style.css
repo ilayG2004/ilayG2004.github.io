@@ -63,10 +63,10 @@ a:hover {
   font-weight: 600;
   transition: all 300 ms ease;
   padding: 1rem;
-  width: 7rem;
+  width: auto; /* Adjust the button size */
   border-radius: 2rem;
-  display: flex;
-  border: rgb(53, 53, 53) 0.1rem solid;
+  display: inline-block; /* Ensure buttons adjust to their content */
+  border: 0.1rem solid rgb(53, 53, 53);
   background: none;
 }
 
@@ -87,10 +87,9 @@ a:hover {
 /*Text Sections */
 section {
   padding-top: 4vh;
-  height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
-  min-height: fit-content;
+  min-height: 100vh; /* Allow sections to take up full height if necessary */
 }
 
 .section container {
@@ -103,6 +102,13 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+}
+
+#assignments {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: auto; /* Allow the section to grow as needed */
 }
 
 .section__pic-container {
@@ -161,9 +167,8 @@ section {
 /*Footer */
 footer {
   padding-top: 20px;
-  align-self: center;
   text-align: center;
-  flex-shrink: 0;
+  margin-top: auto;
 }
 
 /* Contact*/
@@ -175,23 +180,15 @@ footer {
   text-align: center;
 }
 
-.contact-container {
+.contact-container, .contact-info-container {
   display: flex;
   justify-content: center;
-  border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+  flex-direction: column; /* Ensure content flows vertically */
   margin: 2rem auto;
   padding: 0.5rem;
-}
-
-.contact-info-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+  border-radius: 2rem;
+  border: 1px solid rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
 }
 
 .contact-info-container img {
