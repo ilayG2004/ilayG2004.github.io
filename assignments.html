@@ -10,18 +10,15 @@
 </head>
 
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Ilay Guler</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="work-experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="assignments.html">Assignments</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    async function loadNavbar() {
+      const response = await fetch("navbar.html");
+      const navbarHtml = await response.text();
+      document.getElementById("navbar").innerHTML = navbarHtml;
+    }
+    loadNavbar();
+  </script>
   <section id="assignments">
     <p class="section__text__p1">CS506</p>
     <h1 class="title">Assignments</h1>

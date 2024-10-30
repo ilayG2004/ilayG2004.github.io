@@ -10,19 +10,19 @@
 
 </head>
 
+
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Ilay Guler</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="work-experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="assignments.html">Assignments</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Include this in the <body> of each page -->
+  <div id="navbar"></div>
+  <script>
+    async function loadNavbar() {
+      const response = await fetch("navbar.html");
+      const navbarHtml = await response.text();
+      document.getElementById("navbar").innerHTML = navbarHtml;
+    }
+    loadNavbar();
+  </script>
+
   <section id="me">
     <div class="section__pic-container">
       <img src="./assets/profile-pic.png" />
@@ -35,9 +35,47 @@
         New Jersey, and came up to New England to better my skills as a software engineer and expand my world view
         through learning. When I'm not coding, I enjoy going for runs or carp fishing.</p>
       <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('')">Download CV</button>
+        <button class="btn btn-color-2" onclick="window.open('./assets/IlayGulerCV-swe-2024.pdf')">Download CV</button>
       </div>
   </section>
+
+  <hr>
+  <div class="technical-skills">
+    <h1 class="title"> Technical Skills </h1>
+    <div class="contact-container">
+      <div class="contact-info-container">
+        <img src="./assets/python.svg" />
+        <p>Python</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/javaicon.png" />
+        <p>Java</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/reacticon.png" />
+        <p>React Js</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/cssicon.svg" />
+        <p>C#</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/htmlicon.png" />
+        <img src="./assets/cssicon.svg" />
+        <p>HTML/CSS</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/giticon.webp" />
+        <p>Git</p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/postgresicon.png" />
+        <p>PostGreSQL</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
   <footer>
     &copy; 2024 Ilay Guler. All rights reserved
   </footer>

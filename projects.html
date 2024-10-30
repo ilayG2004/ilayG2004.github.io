@@ -10,22 +10,54 @@
 </head>
 
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Ilay Guler</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="index.html">About</a></li>
-        <li><a href="work-experience.html">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="assignments.html">Assignments</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar"></div>
+  <script>
+    async function loadNavbar() {
+      const response = await fetch("navbar.html");
+      const navbarHtml = await response.text();
+      document.getElementById("navbar").innerHTML = navbarHtml;
+    }
+    loadNavbar();
+  </script>
   <section id="projects">
     <h1 class="title">Browse my recent projects</h1>
-    <h2 class="section__text__p2">Syngin Technology Database Transfer and SalesForce Components</h2>
-    <p>Images coming soon...</p>
+
+    <h2 class="section__text__p3"> Amazon Movie Review Score Predictor </h2>
+    <div class="pdf-description-container">
+      <object class="pdf" data="./assets/projects/reviewanalysis/AmazonMovieReview-FinalReport.pdf">
+        Your browser does not support PDFs. <a
+          href="./assets/projects/reviewanalysis/AmazonMovieReview-FinalReport.pdf">Download the PDF</a>
+      </object>
+      <div class="decription">
+        <p> I participated in a Kaggle competition to accurately predict the ratings of Amazon movie reviews given a
+          csv
+          file of training and test data.
+          Please read my report for more information!
+        </p>
+        <div class="fake-btn">
+          <a href='https://github.com/ilayG2004/amazon_review_analysis'>Github Link</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section__text__p3"> Syngin Technologies Lightning Web Component & Proof-of-Delivery (POD) Generator </h2>
+    <p>Attached is a frontend demonstration of the work I did at Syngin Technologies this summer. While I could not film
+      any code (for obvious privacy reasons), I could film the features which utilized it.
+      The new database I set up had to be connected to Salesforce so that our transportation, IT, and sales teams could
+      view data on vehicle deliveries on a case-by-case basis. Attached is a video showing off said features.
+    </p>
+
+    <br>
+    <br>
+
+    <h2 class="section__text__p3"> Spark! Bytes </h2>
+    <p>Spark! Bytes was a prototype app designed to help bring together Boston University students around something they
+      all love -- food. Community leaders could post invites to events with descriptions, photos, tags, locations to
+      appeal to a wider audience of BU students.
+      Whether it was for the actual meeting, or for the take-home after the fact, the goal of this webapp was to reduce
+      food waste by notifying BU students of these events.
+      Attached is a frontend & backend demonstration of my team's project for Spark! Bytes.
+    </p>
   </section>
   <footer>
     &copy; 2024 Ilay Guler. All rights reserved
