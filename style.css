@@ -406,20 +406,6 @@ footer {
   /* Maintains aspect ratio */
 }
 
-.project-image-container img.enlarged {
-  width: auto;
-  max-width: 90vw;
-  /* Responsive max width */
-  max-height: 90vh;
-  /* Responsive max height */
-  transform: scale(1.5);
-  /* Scale up as needed */
-  z-index: 1000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  /* Center and enlarge */
-  background: rgba(0, 0, 0, 0.8);
-  /* Optional: darkens background */
+.project-image-container img:hover {
+  cursor: pointer;
 }
