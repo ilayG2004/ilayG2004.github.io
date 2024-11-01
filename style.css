@@ -104,7 +104,7 @@ section {
 #me {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem;
   height: 80vh;
 }
 
@@ -384,4 +384,42 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.project-image-container {
+  display: flex;
+  gap: 1px;
+  /* Optional: space between images */
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image-container img {
+  margin-top: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 250px;
+  /* Set to your preferred width */
+  height: auto;
+  /* Maintains aspect ratio */
+}
+
+.project-image-container img.enlarged {
+  width: auto;
+  max-width: 90vw;
+  /* Responsive max width */
+  max-height: 90vh;
+  /* Responsive max height */
+  transform: scale(1.5);
+  /* Scale up as needed */
+  z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  /* Center and enlarge */
+  background: rgba(0, 0, 0, 0.8);
+  /* Optional: darkens background */
 }
