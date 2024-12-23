@@ -16,6 +16,15 @@
       const response = await fetch("navbar.html");
       const navbarHtml = await response.text();
       document.getElementById("navbar").innerHTML = navbarHtml;
+
+      const currentPath = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("nav-active"); // Add 'active' class to the current page link
+        }
+      });
     }
     loadNavbar();
   </script>
@@ -31,8 +40,8 @@
       Through collaboration with the Citywide Analytics Team, Boston's central data organization, this project analyzes
       how Boston spends its annual budget and how it may change over time.
       Myself and two other peers collaborated to visualize and make predictions on the city's budget data.
-      Below is the link to our github repo with instructions on how to run the web-app demonstration, alongside
-      screenshots of the web-app.
+      Below is the link to our github repo with instructions on how to run the visualization website locally, alongside
+      a video demonstration of the website.
       <iframe width="560" height="315" src="https://www.youtube.com/embed/03MGgpkg-Vs?si=v2bvQ8VOBbtdGgDc"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

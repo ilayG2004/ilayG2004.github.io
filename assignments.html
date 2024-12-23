@@ -16,6 +16,15 @@
       const response = await fetch("navbar.html");
       const navbarHtml = await response.text();
       document.getElementById("navbar").innerHTML = navbarHtml;
+
+      const currentPath = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("nav-active"); // Add 'active' class to the current page link
+        }
+      });
     }
     loadNavbar();
   </script>
@@ -108,41 +117,59 @@
         </div>
       </div>
     </div>
-     <h2 class="section__text__p2">Assignment 6</h2>
+    <h2 class="section__text__p2">Assignment 6</h2>
     <div class="contact-container">
       <div class="contact-info-container">
-        <p>I created an interactive website that shows how changing parameters affects linear regression results. Please watch the demonstration.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/6ra2f5cjswk?si=O1O99S-04smJgS4b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>I created an interactive website that shows how changing parameters affects linear regression results. Please
+          watch the demonstration.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6ra2f5cjswk?si=O1O99S-04smJgS4b"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="fake-btn">
           <a href='https://github.com/ilayG2004/ilay2004-assignment-6'>Github Link</a>
         </div>
       </div>
     </div>
-     <h2 class="section__text__p2">Assignment 7</h2>
+    <h2 class="section__text__p2">Assignment 7</h2>
     <div class="contact-container">
       <div class="contact-info-container">
-        <p>I created an interactive website that shows how changing parameters affects linear regression results. N simulations (input by users), are run to compare the observed slopes and intercepts to the user inputs -- a p value and confidence interval for these parameters can be generated as well. Please watch the demonstration.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ou_E6i6ojrE?si=0AYDA11c3c06cP74" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>I created an interactive website that shows how changing parameters affects linear regression results. N
+          simulations (input by users), are run to compare the observed slopes and intercepts to the user inputs -- a p
+          value and confidence interval for these parameters can be generated as well. Please watch the demonstration.
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ou_E6i6ojrE?si=0AYDA11c3c06cP74"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="fake-btn">
           <a href='https://github.com/ilayG2004/ilay2004-assignment-7'>Github Link</a>
         </div>
       </div>
     </div>
-       <h2 class="section__text__p2">Assignment 8</h2>
+    <h2 class="section__text__p2">Assignment 8</h2>
     <div class="contact-container">
       <div class="contact-info-container">
-        <p>I created an interactive website that explores the effects of shifting clusters in a dataset on the parameters of a logistic regression model. Please watch the demonstration.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/8fbnKU5q0rI?si=peKKfyDbUbgBpRA7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>I created an interactive website that explores the effects of shifting clusters in a dataset on the
+          parameters of a logistic regression model. Please watch the demonstration.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8fbnKU5q0rI?si=peKKfyDbUbgBpRA7"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="fake-btn">
           <a href='https://github.com/ilayG2004/ilay2004-assignment-8'>Github Link</a>
         </div>
       </div>
     </div>
-     <h2 class="section__text__p2">Assignment 9</h2>
+    <h2 class="section__text__p2">Assignment 9</h2>
     <div class="contact-container">
       <div class="contact-info-container">
-        <p>I created an interactive website that shows how changing parameters activation function on neural networks yields convergence at different step times.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/o5ZOnXuNTmE?si=j1rTmZwVv-pwRLAl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p>I created an interactive website that shows how changing parameters activation function on neural networks
+          yields convergence at different step times.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/o5ZOnXuNTmE?si=j1rTmZwVv-pwRLAl"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <div class="fake-btn">
           <a href='https://github.com/ilayG2004/ilay2004-assignment-9'>Github Link</a>
         </div>

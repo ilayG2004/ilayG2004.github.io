@@ -16,6 +16,15 @@
       const response = await fetch("navbar.html");
       const navbarHtml = await response.text();
       document.getElementById("navbar").innerHTML = navbarHtml;
+
+      const currentPath = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === currentPath) {
+          link.classList.add("nav-active"); // Add 'active' class to the current page link
+        }
+      });
     }
     loadNavbar();
   </script>
